@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.example.miniproject.R
 
@@ -41,8 +42,8 @@ class AboutFragment : Fragment() {
         // Inflate the layout for this fragment
         val a = inflater.inflate(R.layout.fragment_about, container, false)
 
-        val facebook = a.findViewById<ImageButton>(R.id.btn_facebook)
-        val insta = a.findViewById<ImageButton>(R.id.btn_instagram)
+        val facebook = a.findViewById<ImageView>(R.id.btn_facebook)
+        val insta = a.findViewById<ImageView>(R.id.btn_instagram)
 
         facebook.setOnClickListener {
             val fbUrl = "https://www.facebook.com/AssociationForComputingMachinery"

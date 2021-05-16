@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".RegisterActivity">
 
     <ImageView
@@ -23,7 +24,7 @@
         android:id="@+id/user"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="95dp"
         app:layout_constraintBottom_toTopOf="@id/user"
         app:layout_constraintEnd_toEndOf="@+id/bg"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,15 +97,16 @@
 
     <TextView
         android:id="@+id/tv_already_have_an_account"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:padding="5dp"
         android:layout_marginRight="28dp"
-        android:text="Already have an account?"/>
+        android:padding="5dp"
+        android:text="Already have an account?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_register" />
 
     <TextView
         android:id="@+id/tv_login"
