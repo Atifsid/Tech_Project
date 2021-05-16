@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.FunctionsFragment">
+
+
+    <ImageView
+        android:id="@+id/btn_call"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/call"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/btn_mail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="@id/btn_call"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_sms"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="200dp"
+        android:src="@drawable/sms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/btn_text"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="200dp"
+        android:src="@drawable/text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</FrameLayout>

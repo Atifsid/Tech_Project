@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND MESSAGE"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edtMobno"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/edtMobno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Mobile No."
+        android:inputType="text"
+        android:layout_marginBottom="550dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/sms_messageEt"
+        android:hint="Write your message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtMobno" />
+
+    <Button
+        android:id="@+id/btnSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Message"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sms_messageEt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
