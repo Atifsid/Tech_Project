@@ -33,6 +33,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <ImageButton
+        android:id="@+id/btn_facebook"
         android:layout_height="80dp"
         android:layout_width="80dp"
         android:scaleType="centerCrop"
@@ -41,6 +42,7 @@
         android:layout_marginTop="350dp"/>
 
     <ImageButton
+        android:id="@+id/btn_instagram"
         android:src="@drawable/instagram"
         android:layout_marginLeft="250dp"
         android:layout_marginTop="350dp"

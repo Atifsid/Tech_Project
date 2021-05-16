@@ -1,14 +1,15 @@
 package com.example.miniproject.fragments
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.miniproject.CallActivity
+import android.widget.ImageButton
+import androidx.fragment.app.Fragment
 import com.example.miniproject.R
-import kotlinx.android.synthetic.main.fragment_functions.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,7 +39,26 @@ class AboutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about, container, false)
+        val a = inflater.inflate(R.layout.fragment_about, container, false)
+
+        val facebook = a.findViewById<ImageButton>(R.id.btn_facebook)
+        val insta = a.findViewById<ImageButton>(R.id.btn_instagram)
+
+        facebook.setOnClickListener {
+            val fbUrl = "https://www.facebook.com/AssociationForComputingMachinery"
+            val fbIntent = Intent(Intent.ACTION_VIEW)
+            fbIntent.data = Uri.parse(fbUrl)
+            startActivity(fbIntent)
+        }
+
+        insta.setOnClickListener {
+            val instaUrl = "https://www.instagram.com/ipec_acm_chapter/"
+            val instaIntent = Intent(Intent.ACTION_VIEW)
+            instaIntent.data = Uri.parse(instaUrl)
+            startActivity(instaIntent)
+        }
+
+        return a
     }
 
     companion object {
