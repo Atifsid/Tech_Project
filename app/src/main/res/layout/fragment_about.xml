@@ -3,12 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="20dp"
+        android:text="What is ACM?"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_para"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="80dp"
+        android:text="ACM's Special Interest Groups (SIGs) represent major areas of computing, addressing the interests of technical communities that drive innovation. SIGs offer a wealth of conferences, publications and activities focused on specific computing sub-disciplines. They enable members to share expertise, discovery and best practices."
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <ImageButton
+        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/facebook"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="350dp"/>
+
+    <ImageButton
+        android:src="@drawable/instagram"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="350dp"
+        android:scaleType="centerCrop"
+        android:layout_height="80dp"
+        android:layout_width="80dp"/>
+
 
 </FrameLayout>
