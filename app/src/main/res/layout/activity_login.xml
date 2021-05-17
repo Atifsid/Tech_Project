@@ -98,14 +98,15 @@
 
     <TextView
         android:id="@+id/tv_don_t_have_an_account"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
         android:padding="5dp"
-        android:text="Don\'t have an account?"/>
+        android:text="Don\'t have an account?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
     <TextView
         android:id="@+id/tv_register"
@@ -118,5 +119,18 @@
         app:layout_constraintEnd_toEndOf="@id/tv_don_t_have_an_account"
         app:layout_constraintStart_toStartOf="@id/tv_don_t_have_an_account"
         app:layout_constraintTop_toBottomOf="@id/tv_don_t_have_an_account" />
+
+    <TextView
+        android:id="@+id/guest_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest Login?"
+        android:layout_marginBottom="30dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
