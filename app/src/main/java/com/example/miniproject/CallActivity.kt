@@ -5,18 +5,17 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_call.*
 import java.util.jar.Manifest
 
 
 class CallActivity : AppCompatActivity() {
 
+    internal var textNumber: String?=""
     private val REQUEST_PHONE_CALL = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +38,12 @@ class CallActivity : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     private fun startCall() {
+        val etTextNumber = findViewById<TextView>(R.id.text_number)
+        textNumber = etTextNumber.text.toString().trim()
+
         val callIntent = Intent(Intent.ACTION_CALL)
-        val phoneNumber = findViewById<EditText>(R.id.text_number).toString()
-        callIntent.data = Uri.parse("tel:$phoneNumber")
+
+        callIntent.data = Uri.parse("tel:$textNumber")
         startActivity(callIntent)
     }
 
